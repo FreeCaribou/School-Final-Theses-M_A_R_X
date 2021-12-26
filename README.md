@@ -7,4 +7,6 @@ Mobile app hybrid framework comparison
 
 App to manage credit and debt with friend (simply, only for POC)
 
-Will be probably never be updated
+Paper work in french
+
+!!! Will be probably never be updated !!!
