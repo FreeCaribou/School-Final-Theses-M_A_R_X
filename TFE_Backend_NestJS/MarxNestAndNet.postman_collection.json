@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "706c8c7a-5af9-4c0d-9be5-0059af954509",
+		"name": "MarxNestAndNet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"idAuth\" :\"auth0|5b8bcdb84b3e140de3010e770\",\r\n\"mail\" :\"testouillegratouimme@gmail.com\",\r\n\"username\" : \"John Doeityourselfbro\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTQ3Mzk1NzY3fQ.J-8HOSFvFiCZ9tOZ9jy-Vib211TfMc89_OeZnqTT8PU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get relationship type",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTQ3Mzk1NzY3fQ.J-8HOSFvFiCZ9tOZ9jy-Vib211TfMc89_OeZnqTT8PU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/relationshipTypes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"api",
+						"relationshipTypes"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add relationship type",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTQ3Mzk1NzY3fQ.J-8HOSFvFiCZ9tOZ9jy-Vib211TfMc89_OeZnqTT8PU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"paul \"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/relationshipTypes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"api",
+						"relationshipTypes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user relationship type",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTQ3Mzk1NzY3fQ.J-8HOSFvFiCZ9tOZ9jy-Vib211TfMc89_OeZnqTT8PU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/userRelationshipTypes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"api",
+						"userRelationshipTypes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get relationship",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTQ3Mzk1NzY3fQ.J-8HOSFvFiCZ9tOZ9jy-Vib211TfMc89_OeZnqTT8PU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/relationships",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"api",
+						"relationships"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add relationship",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTQ3Mzk1NzY3fQ.J-8HOSFvFiCZ9tOZ9jy-Vib211TfMc89_OeZnqTT8PU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Fll\",\n\t\"userRelationshipTypeId\": 8\n}"
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/relationships",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"api",
+						"relationships"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Title}"
+             x:Class="VeryNewMarx.Views.RelationshipTypesPage">
+    <StackLayout>
+        <ListView x:Name="MyListView"
+            ItemsSource="{Binding RelaType}"
+            ItemTapped="Handle_ItemTapped"
+            CachingStrategy="RecycleElement">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Name}" 
+                   Style="{DynamicResource ListItemTextStyle}"/>
+                            <Label Text="{Binding UserRelationshipType.RelationshipType.Name}" 
+                   Style="{DynamicResource ListItemDetailTextStyle}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="New relationship type" Clicked="NewRelationshipType_Button_Clicked" 
+                VerticalOptions="EndAndExpand" BackgroundColor="{StaticResource Primary}"/>
+    </StackLayout>
+
+</ContentPage>

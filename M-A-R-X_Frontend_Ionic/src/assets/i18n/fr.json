@@ -1,0 +1,88 @@
+{
+  "General": {
+    "Welcome": "Bienvenue",
+    "Add": "Ajouter",
+    "Update": "Mettre à jour",
+    "Cancel": "Annuler",
+    "Confirm": "Confirmer",
+    "AreYouSure": "Êtes vous sur?",
+    "Error": "Erreur",
+    "InWorking": "En cours de construction",
+    "Date": "Date",
+    "Both" : "Les deux",
+    "Save": "Sauver",
+    "Delete": "Supprimer"
+  },
+  "Menu": {
+    "Home": "Accueil",
+    "Relationship": "Relation",
+    "RelationshipType": "Type de relation",
+    "Option": "Option",
+    "Currency": "Devises",
+    "Payment": "Paiement",
+    "AddPayment": "Ajouter un paiement",
+    "DetailPayment": "Détail d'un paiement",
+    "DetailRelationship": "Détail d'une relation",
+    "Logout" : "Déconnexion",
+    "NewRelationship": "Nouvelle relation"
+  },
+  "Login": {
+    "Username": "Nom d'utilisateur",
+    "Password": "Mot de passe",
+    "StayConnect": "Rester connecté?",
+    "Login" : "Connection"
+  },
+  "Home": {
+    "Home": "Accueil",
+    "PaymentNotRefund": "Mes paiements non remboursés",
+    "PaymentDebNotRefund": "Mes débits non remboursés",
+    "PaymentCreNotRefund": "Mes crédits non remboursés",
+    "NoPaymentDeb": "Il n'y a pas de paiement à rembourser",
+    "NoPaymentCre": "Il n'y a pas de paiement à se faire rembourser"
+  },
+  "Option": {
+    "Option": "Menu des options",
+    "ChangeLanguage": "Changer la langue"
+  },
+  "Relationship": {
+    "AddRelationshipType": "Ajouter un nouveau type de relation",
+    "Name": "Nom",
+    "DeleteRelationshipType": "Voulez vous vraiment supprimer ce type de relation?",
+    "MyRelationshipType": "Mes types de relation",
+    "MyRelationship": "Mes relations",
+    "AddRelationship": "Ajouter une relation",
+    "RelationshipName": "Nom de la relation",
+    "RelationshipTypeName": "Nom du type de relation",
+    "MustHaveRelationshipType": "Vous devez avoir au moins un type de relation",
+    "RelationshipReminderDayChoose": "Nombre de jours pour rappeler de rembourser un emprunt"
+  },
+  "Payment": {
+    "Deb": "Débit",
+    "Cre": "Crédit",
+    "MyPayment": "Mes paiements",
+    "Title": "Titre",
+    "Detail": "Détail",
+    "AddPayment": "Ajouter un paiement",
+    "Relationship": "Relation",
+    "Amount": "Montant",
+    "Currency": "Devise",
+    "Date": "Date",
+    "Type": "Type",
+    "IsRefunded": "Est remboursé",
+    "RefundedDate": "Remboursé le",
+    "AddRelationship": "Ajouter une relation",
+    "AddCurrency": "Ajouter une devise",
+    "MissSomeElement": "Il manque certains élément pour completer un paiement",
+    "AddReminderDate": "Ajouter une date de rappel",
+    "ReminderDateAdded": "Le rappel a été ajouté",
+    "SeeRefunded": "Voir remboursés?",
+    "DontHaveRelationship": "Veuillez créer une relation"
+  },
+  "Currency": {
+    "AddCurrency": "Ajouter une devise",
+    "Name": "Nom de la devise",
+    "Label": "Nom du label (3 caractères)",
+    "MyCurrencies": "Mes devises",
+    "DeleteCurrency": "Voulez vous vraiment supprimer cette devise?"
+  }
+}

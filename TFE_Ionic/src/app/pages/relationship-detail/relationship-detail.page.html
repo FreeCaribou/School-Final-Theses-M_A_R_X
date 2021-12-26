@@ -1,0 +1,21 @@
+<app-header [title]="'Menu.DetailRelationship' | translate" [defaultHref]="defaultHref"></app-header>
+
+<ion-content>
+  <app-loader *ngIf="isLoading"></app-loader>
+  <div *ngIf="!isLoading">
+    <app-relationship-card [relationship]="relationship"></app-relationship-card>
+    <app-payment-list [paymentList]="paymentList" [previousPage]="previousPageRoute">
+    </app-payment-list>
+  </div>
+</ion-content>
+
+<ion-fab vertical="top" horizontal="end" slot="fixed">
+  <ion-fab-button color="danger" (click)="delete()">
+    <ion-icon name="trash"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button color="secondary" [routerLink]="['new-payment', previousPageRoute]">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

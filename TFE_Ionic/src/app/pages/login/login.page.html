@@ -1,0 +1,18 @@
+<ion-content *ngIf="!isLoading">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h1 class="login-title">MARX</h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-fab vertical="center" horizontal="center" slot="fixed">
+    <ion-fab-button color="primary" (click)="login()">
+      <ion-icon name="power"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+<ion-content *ngIf="isLoading">
+  <app-loader></app-loader>
+</ion-content>

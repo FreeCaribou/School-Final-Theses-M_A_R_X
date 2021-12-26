@@ -1,0 +1,19 @@
+{
+  "General": {
+    "Welcome": "Velkommen",
+    "Add": "Legg til",
+    "Update": "Update",
+    "Cancel": "Cancel",
+    "Confirm": "Bekreft",
+    "AreYouSure": "Er du sikker?",
+    "Error": "Error",
+    "InWorking": "I arbeid",
+    "Date": "Date",
+    "Both" : "Begge",
+    "Save": "Save"
+  },
+  "Option": {
+    "Option": "Alternativ",
+    "ChangeLanguage": "Endre språket"
+  }
+}

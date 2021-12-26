@@ -1,0 +1,88 @@
+{
+  "General": {
+    "Welcome": "Welcome",
+    "Add": "Add",
+    "Update": "Update",
+    "Cancel": "Cancel",
+    "Confirm": "Confirm",
+    "AreYouSure": "Are you sure?",
+    "Error": "Error",
+    "InWorking": "In working",
+    "Date": "Date",
+    "Both" : "Both",
+    "Save": "Save",
+    "Delete": "Delete"
+  },
+  "Menu": {
+    "Home": "Home",
+    "Relationship": "Relationship",
+    "RelationshipType": "Relationship Type",
+    "Option": "Option",
+    "Currency": "Currencies",
+    "Payment": "Payment",
+    "AddPayment": "Add a payment",
+    "DetailPayment": "Payment detail",
+    "DetailRelationship": "Relationship detail",
+    "Logout" : "Logout",
+    "NewRelationship": "New relationship"
+  },
+  "Login": {
+    "Username": "Username",
+    "Password": "Password",
+    "StayConnect": "Stay connected?",
+    "Login" : "Login"
+  },
+  "Home": {
+    "Home": "Home",
+    "PaymentNotRefund": "My not refunded payment",
+    "PaymentDebNotRefund": "My debit not refunded",
+    "PaymentCreNotRefund": "My credit not refunded",
+    "NoPaymentDeb": "There is no payment to repay",
+    "NoPaymentCre": "There is no payment to be refunded"
+  },
+  "Option": {
+    "Option": "Options menu",
+    "ChangeLanguage": "Change the language"
+  },
+  "Relationship": {
+    "AddRelationshipType": "Add a new relationship type",
+    "Name": "Name",
+    "DeleteRelationshipType": "Do you really want to delete this type of relationship?",
+    "MyRelationshipType": "My relationship type",
+    "MyRelationship": "My relationship",
+    "AddRelationship": "Add a new relationship",
+    "RelationshipName": "Name of the relationship",
+    "RelationshipTypeName": "Name of the relationship type",
+    "MustHaveRelationshipType": "You must have at least one relationship type",
+    "RelationshipReminderDayChoose": "Number of days to remind to repay a loan"
+  },
+  "Payment": {
+    "Deb": "Debit",
+    "Cre": "Credit",
+    "MyPayment": "My payments",
+    "Title": "Title",
+    "Detail": "Detail",
+    "AddPayment": "Add a payment",
+    "Relationship": "Relationship",
+    "Amount": "Amount",
+    "Currency": "Currency",
+    "Date": "Date",
+    "Type": "Type",
+    "IsRefunded": "Is refunded!",
+    "RefundedDate": "Refunded the",
+    "AddRelationship": "Add a new relationship",
+    "AddCurrency": "Add a currency",
+    "MissSomeElement": "It's miss some element to complete a payment",
+    "AddReminderDate": "Add a reminder date",
+    "ReminderDateAdded": "The reminder date is added",
+    "SeeRefunded": "See refunded?",
+    "DontHaveRelationship": "Please create a relationship"
+  },
+  "Currency": {
+    "AddCurrency": "Add a currency",
+    "Name": "Name of the currency",
+    "Label": "Name of the label (3 characters)",
+    "MyCurrencies": "My currencies",
+    "DeleteCurrency": "Do you really want to delete this currency?"
+  }
+}

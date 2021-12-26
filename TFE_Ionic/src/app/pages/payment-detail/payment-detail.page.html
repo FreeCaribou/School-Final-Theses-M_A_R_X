@@ -1,0 +1,70 @@
+<app-header [title]="'Payment.Detail' | translate" [defaultHref]="defaultHref"></app-header>
+
+<ion-content>
+  <app-loader *ngIf="isLoading"></app-loader>
+  <ion-grid *ngIf="!isLoading">
+    <ion-row>
+      <ion-col size="6">
+        <h1>{{ payment.title }}</h1>
+      </ion-col>
+      <ion-col size="6">
+        <h2>{{ payment.amount }} {{ payment.currency }}</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <h3>{{ payment.relationship.name }}</h3>
+      </ion-col>
+      <ion-col size="6">
+        <h3>{{ payment.date | date }}</h3>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <p>{{ payment.detail }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <div *ngIf="payment.type == 'deb'">{{ "Payment.Deb" | translate }}</div>
+        <div *ngIf="payment.type == 'cre'">{{ "Payment.Cre" | translate }}</div>
+      </ion-col>
+      <ion-col size="9">
+        <ion-icon *ngIf="payment.refunded" name="checkmark-circle" color="success"></ion-icon>
+        <ion-icon *ngIf="!payment.refunded" name="close-circle" color="danger"></ion-icon>
+        <p *ngIf="payment.refunded">
+          {{ "Payment.RefundedDate" | translate }}: {{ payment.refundedDate | date:'dd/MM/yyyy' }}
+        </p>
+        <ion-button *ngIf="!payment.refunded" (click)="refunded()" type="submit" color="secondary" icon-start>
+          {{ "Payment.IsRefunded" | translate }}
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <form *ngIf="payment.reminderDate == null && !payment.refunded" [formGroup]="reminderDateForm">
+          <h6>{{ "Payment.AddReminderDate" | translate }}</h6>
+          <ion-item>
+            <ion-label color="primary">{{ "Payment.Date" | translate }}</ion-label>
+            <ion-datetime displayFormat="DD/MM/YYYY" formControlName="date" [min]="dateNow" [max]="dateMax">
+            </ion-datetime>
+          </ion-item>
+          <ion-button class="button-add" type="submit" color="secondary" icon-start (click)="addReminderDate()"
+            [disabled]="!reminderDateForm.valid || isItemAdded">
+            <ion-icon *ngIf="!isLoading" name="add"></ion-icon>
+            <ion-spinner *ngIf="isLoading" name="bubbles"></ion-spinner>
+            {{ "General.Add" | translate }}
+          </ion-button>
+        </form>
+        <h6 *ngIf="payment.reminderDate">{{ "Payment.ReminderDateAdded" | translate }}: {{payment.reminderDate.date}}
+        </h6>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-fab vertical="top" horizontal="end" slot="fixed">
+  <ion-fab-button color="danger" (click)="delete()">
+    <ion-icon name="trash"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

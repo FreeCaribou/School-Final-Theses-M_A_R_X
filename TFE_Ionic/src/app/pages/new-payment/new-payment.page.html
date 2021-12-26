@@ -1,0 +1,84 @@
+<app-header [title]="'Menu.AddPayment' | translate" [defaultHref]="defaultHref"></app-header>
+
+<ion-content>
+  <app-loader *ngIf="isLoading"></app-loader>
+  <div *ngIf="!isLoading">
+    <form [formGroup]="paymentForm">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-item>
+              <ion-label color="primary" position="floating">{{"Payment.Title" | translate}}</ion-label>
+              <ion-input type="text" formControlName="title" required></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="6">
+            <ion-item *ngIf="relationshipList.length > 0">
+              <ion-label color="primary" position="floating">{{"Payment.Relationship" | translate}}</ion-label>
+              <ion-select interface="popover" formControlName="relationship">
+                <ion-select-option *ngFor="let item of relationshipList" [value]="item">
+                  {{ item.name }} - {{ item.userRelationshipType.relationshipType.name }}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item *ngIf="relationshipList.length == 0">
+              <ion-button color="secondary" routerLink="/tabs/relationship">
+                {{'Payment.DontHaveRelationship' | translate}}
+              </ion-button>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12">
+            <ion-item>
+              <ion-label color="primary" position="floating">{{"Payment.Detail" | translate}}</ion-label>
+              <ion-textarea type="text" formControlName="detail"></ion-textarea>
+            </ion-item>
+          </ion-col>
+          <ion-col size="6">
+            <ion-item>
+              <ion-label color="primary" position="floating">{{"Payment.Amount" | translate}}</ion-label>
+              <ion-input type="number" formControlName="amount" min="0"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="4">
+            <ion-item>
+              <ion-label color="primary" position="floating">{{"Payment.Currency" | translate}}</ion-label>
+              <ion-input type="search" formControlName="currency" autocomplete="on" maxlength="10" required></ion-input>
+            </ion-item>
+          </ion-col>
+          <!-- TODO The arrow must be at the bottom -->
+          <!-- TODO have list filter with string ? -->
+          <ion-col size="2">
+            <ion-select interface="popover" (ionChange)="currencySelectedChange($event)" selectedText=" ">
+              <ion-select-option *ngFor="let item of suggestedCurrenciesList" [value]="item">
+                {{ item }}
+              </ion-select-option>
+            </ion-select>
+          </ion-col>
+          <ion-col size="12">
+            <ion-item>
+              <ion-label color="primary" position="floating">{{"Payment.Type" | translate}}</ion-label>
+              <ion-select interface="popover" formControlName="type">
+                <ion-select-option value="deb">{{ "Payment.Deb" | translate }}</ion-select-option>
+                <ion-select-option value="cre">{{ "Payment.Cre" | translate }}</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12">
+            <ion-item>
+              <ion-label color="primary" position="floating">{{ "Payment.Date" | translate }}</ion-label>
+              <ion-datetime display-format="DD/MM/YYYY" [value]="date" formControlName="date"></ion-datetime>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12">
+            <ion-button color="secondary" icon-start (click)="addPayment()"
+              [disabled]="!paymentForm.valid || isItemAdded">
+              <ion-icon *ngIf="!isItemAdded" name="add"></ion-icon>
+              <ion-spinner *ngIf="isItemAdded" name="bubbles"></ion-spinner>
+              {{ "General.Add" | translate }}
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </div>
+</ion-content>

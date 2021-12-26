@@ -1,0 +1,19 @@
+{
+  "General": {
+    "Welcome": "Welkom",
+    "Add": "Toevoegen",
+    "Update": "Update",
+    "Cancel": "Annuleren",
+    "Confirm": "Bevestigen",
+    "AreYouSure": "Weet je het zeker",
+    "Error": "Error",
+    "InWorking": "In working",
+    "Date": "Date",
+    "Both" : "Beide",
+    "Save": "Save"
+  },
+  "Option": {
+    "Option": "Optie",
+    "ChangeLanguage": "Verander de taal"
+  }
+}

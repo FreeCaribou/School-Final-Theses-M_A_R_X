@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="VeryNewMarx.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VeryNewMarx.UWP"
+    RequestedTheme="Light">
+
+</Application>

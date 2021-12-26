@@ -1,0 +1,18 @@
+<app-header [title]="'Menu.Relationship' | translate"></app-header>
+
+<ion-content>
+  <app-loader *ngIf="isLoading"></app-loader>
+  <ion-list *ngIf="!isLoading">
+    <ion-item
+      *ngFor="let item of relationshipList"
+      [routerLink]="['relationship-detail', item.id]"
+    >
+      {{ item.name }} - {{ item.userRelationshipType.relationshipType.name }}
+    </ion-item>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="secondary" routerLink="new-relationship">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

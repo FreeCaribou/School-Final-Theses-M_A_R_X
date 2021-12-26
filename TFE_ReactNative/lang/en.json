@@ -1,0 +1,23 @@
+{
+  "title" : "Titel in english",
+  "General" : {
+    "Relationship" : "Relationship",
+    "Setting" : "Settings",
+    "Add" : "Add",
+    "Name" : "Name",
+    "HelloWorld" : "Hello comrade and welcome!"
+  },
+  "Home" : {
+    "Welcome" : "Welcome"
+  },
+  "Relationship" : {
+    "MyRelationships" : "My relationships",
+    "MyRelationshipTypes" : "My relationship types",
+    "AddNewRelationshipType" : "Add a new relationship type",
+    "AddNewRelationship" : "Add a new relationship"
+  },
+  "Setting" : {
+    "Settings" : "Settings",
+    "Language" : "Language"
+  }
+}

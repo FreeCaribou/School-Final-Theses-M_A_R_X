@@ -1,0 +1,3 @@
+<div *ngFor="let item of paymentList" (press)="click()" [routerLink]="['payment-detail', item.id, previousPage]">
+  <app-payment-summary [payment]="item"></app-payment-summary>
+</div>

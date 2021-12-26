@@ -1,0 +1,8 @@
+{
+  "name": "marx-app",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

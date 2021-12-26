@@ -1,0 +1,37 @@
+<app-header [title]="'Menu.NewRelationship' | translate" [defaultHref]="defaultHref">
+</app-header>
+
+<ion-content>
+  <form *ngIf="haveRelationshipType" [formGroup]="relationshipForm">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="9">
+          <ion-item>
+            <ion-label color="primary" position="floating">{{
+              "Relationship.RelationshipTypeName" | translate
+            }}</ion-label>
+            <ion-input clearInput type="text" formControlName="name" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="select-label">{{
+              "Menu.RelationshipType" | translate
+            }}</ion-label>
+            <ion-select interface="popover" formControlName="userRelationshipType">
+              <ion-select-option *ngFor="let item of relationshipTypeList" [value]="item">
+                {{ item.relationshipType.name }}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button color="secondary" icon-start (click)="addRelationship()"
+            [disabled]="!relationshipForm.valid || isItemAdded">
+            <ion-icon *ngIf="!isItemAdded" name="add"></ion-icon>
+            <ion-spinner *ngIf="isItemAdded" name="bubbles"></ion-spinner>
+            {{ "General.Add" | translate }}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

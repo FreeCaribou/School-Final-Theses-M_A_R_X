@@ -1,0 +1,23 @@
+{
+  "title": "Titre en Fr",
+  "General": {
+    "Relationship": "Relation",
+    "Setting": "Options",
+    "Add": "Ajouter",
+    "Name": "Nom",
+    "HelloWorld": "Bonjour camarade et bienvenue!"
+  },
+  "Home": {
+    "Welcome": "Bienvenue"
+  },
+  "Relationship": {
+    "MyRelationships": "Mes relations",
+    "MyRelationshipTypes": "Mes types de relations",
+    "AddNewRelationshipType": "Ajouter un nouveau type de relation",
+    "AddNewRelationship": "Ajouter une nouvelle relation"
+  },
+  "Setting": {
+    "Settings": "Options",
+    "Language": "Langue"
+  }
+}

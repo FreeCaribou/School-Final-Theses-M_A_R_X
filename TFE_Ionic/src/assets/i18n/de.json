@@ -1,0 +1,19 @@
+{
+  "General": {
+    "Welcome": "Wilkommen",
+    "Add": "Hinzufügen",
+    "Update": "Update",
+    "Cancel": "Abbrechen",
+    "Confirm": "Bestätigen",
+    "AreYouSure": "Bist du sicher",
+    "Error": "Fehler",
+    "InWorking": "In der Arbeit",
+    "Date": "Datum",
+    "Both" : "Beides",
+    "Save": "Speichern"
+  },
+  "Option": {
+    "Option": "Options",
+    "ChangeLanguage": "Ändern Sie die Sprache"
+  }
+}

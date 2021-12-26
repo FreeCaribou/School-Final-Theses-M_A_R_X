@@ -1,0 +1,30 @@
+<ion-card>
+    <ion-grid>
+        <ion-row>
+            <ion-col> {{ payment.title }} </ion-col>
+            <ion-col>
+                {{ payment.amount }} {{ payment.currency }}
+            </ion-col>
+            <ion-col> {{ payment.relationship.name }} </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="8"> {{ payment.detail }} </ion-col>
+            <ion-col size="4">
+                <div *ngIf="payment.type == 'deb'">
+                    {{ "Payment.Deb" | translate }}
+                    <ion-icon name="trending-up" color="success"></ion-icon>
+                </div>
+                <div *ngIf="payment.type == 'cre'">
+                    {{ "Payment.Cre" | translate }}
+                    <ion-icon name="trending-down" color="danger"></ion-icon>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-icon *ngIf="payment.refunded" name="checkmark-circle" color="success"></ion-icon>
+                <ion-icon *ngIf="!payment.refunded" name="close-circle" color="danger"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-card>
